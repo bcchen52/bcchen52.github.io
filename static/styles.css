@@ -1,0 +1,68 @@
+
+.navbar {
+    border-radius:20px;
+    border-width:2px;
+}
+
+#content {
+    margin-top:20px;
+}
+
+.sticky-top { 
+    top: 10px;
+}
+
+.active > span {
+    font-style:italic;
+    color:purple;
+}
+
+.nav-link:hover {
+    background-color:white;
+    color:blue;
+}
+
+.project-link {
+    width:110%;
+}
+
+.project-link-span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden
+}
+
+.course {
+    border-width:1px;
+    border-radius:10px;
+    border-style:solid;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    
+    width:100%;
+}
+
+.course-code {
+    font-size:25px;
+    font-weight: bold;
+}
+
+.course-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    font-size:20px;
+}
+
+.course-info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    font-size:15px;
+    color:gray;
+}
