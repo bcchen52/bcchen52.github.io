@@ -1,4 +1,8 @@
 
+body {
+    font-family: 'Poppins';
+}
+
 .navbar {
     border-radius:20px;
     border-width:2px;
@@ -48,6 +52,9 @@
 .course-code {
     font-size:25px;
     font-weight: bold;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
 }
 
 .course-title {
@@ -65,4 +72,28 @@
     overflow: hidden;
     font-size:15px;
     color:gray;
+}
+
+.course-heading {
+    margin-top: 15px;
+    font-size:20px;
+}
+
+.course-content {
+    text-overflow: ellipsis;
+    display: block;
+    overflow-wrap: break-word;
+    font-size:12px;
+}
+
+.courses-mini-title {
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: purple;
+}
+
+.content {
+    font-size: 14px;
 }
