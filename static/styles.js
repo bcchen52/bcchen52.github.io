@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     home();
     create_classes_page();
     create_projects();
+    create_experiences_page();
     //console.log('hello');
 
     document.querySelectorAll('.main-nav').forEach((button) => {
@@ -31,7 +32,6 @@ const all_classes = [
 ];
 
 const current_classes = [];
-
 const past_classes = [];
 
 for (const course of all_classes){
@@ -43,11 +43,29 @@ for (const course of all_classes){
 }
 
 const all_projects = [
-    {"name": "Network App", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "C", "frameworks": "", "content": "<br><br>This project is an extension of project 4, Network from Harvard University's CS50W", "link":"https://github.com/bcchen52/floating-point-converter"},
-    {"name": "Mail App", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "HTML, CSS, Python, SQL", "frameworks": "Bootstrap, SQLite", "content": "<video width='80%' src='media/Mail.mp4' controls >Video not supported.</video><br><br>This project is an extension of project 3, Mail from Harvard University's CS50W", "link":"https://github.com/bcchen52/floating-point-converter"},
-    {"name": "Dataset Regression Analysis", "time":"June 2024-July 2024", "skills": "Regression Analysis, Model Fitting", "languages": "R", "frameworks": "R Studio", "content": "This is a report-style linear regression analysis on the Hitters dataset from R's ISLR package.<br><br> This report includes a full exploratory analysis of the data and uses regression analysis to transform and create a regression model to accurately fit the data.<br><br><object data='your_url_to_pdf' type='application/pdf'><iframe src='media/finalprojectreport_brian_chen.pdf' width='80%' height='500px'></iframe></object><br><br>This project is the final project from Binghamton University's MATH329 ", "link":"https://docs.google.com/document/d/e/2PACX-1vRkaHLJ-tC_CsTu18xy2-QZdvBiREy7sn-nhmgYR7kz8RhojEwMecHvA4rdxljJFkbxCHdpQ8VRHYPq/pub"},
-    {"name": "Floating Point Converter", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "C", "frameworks": "", "content": "This program uses C to take a double floating point value and use bit twiddling to store it into a floatx value with user-specified exponent and fraction bit sizes.<br><br>The floatx value will be stored in the right most bits of a double value, meaning that the total bits(exponent bits, fraction bits, and sign bit) have a maximum of 64. There must be at least 1 fraction bit and 1 exponent bit, and the minimum number of total bits is 3.<br><br>According to the IEEE standard, a double point floating values has 1 sign bit, 11 exponent bits, and 52 fraction bits. Some values may need more magnitude, i.e. more exponent bits, and less precision, i.e. less fraction bits, or vice versa. A value simply may not need the extent of precision and size given by a standard single or double floating point. <br><br>This project is an extension of a project from Binghamton University's CS220", "link":"https://github.com/bcchen52/floating-point-converter"},
+    {"name": "Multiplix", "role":"Individual Project", "time":"August 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Work in Progress.", "link":"https://github.com/bcchen52/multiplix"},
+    {"name": "Network App", "role":"Individual Project", "time":"July 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Network is a single-page Twitter-like social network that allows users to post, follow other users, and interact with posts.<br><br>The front-end utilizes JavaScript to interact with posts and CSS to animate elements.<br><br>The back-end utilizes Django to create and serve API calls that are used to store and represent post and user data, as well as providing information about the current user and session.<br><br>Network is project 4 from Harvard University's CS50W, and basic login/register/logout functions were included in the starter code.<br><br>This project is an extension of project 4, Network from Harvard University's CS50W", "link":"https://github.com/bcchen52/network"},
+    {"name": "Mail App", "role":"Individual Project", "time":"July 2024", "skills": "Front-end Web Development, Responsive Design", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Mail is a single-page email application that allows users to send emails to each other through API calls.<br><br>Users send and interact with emails through the front-end and JavaScript, which makes API calls with Django. Users can send, archive, and reply to emails.<br><br><video width='80%' src='media/Mail.mp4' controls >Video not supported.</video><br><br>This project is an extension of project 3, Mail from Harvard University's CS50W", "link":"https://github.com/bcchen52/mail"},
+    {"name": "Dataset Regression Analysis", "role":"Individual Project", "time":"June 2024-July 2024", "skills": "Regression Analysis, Model Fitting", "languages": "R", "frameworks": "R Studio", "content": "This is a report-style linear regression analysis on the Hitters dataset from R's ISLR package.<br><br> This report includes a full exploratory analysis of the data and uses regression analysis to transform and create a regression model to accurately fit the data.<br><br><object data='your_url_to_pdf' type='application/pdf'><iframe src='media/finalprojectreport_brian_chen.pdf' width='80%' height='500px'></iframe></object><br><br>This project is the final project from Binghamton University's MATH329 ", "link":"https://github.com/bcchen52/hitters-regression-analysis"},
+    {"name": "Floating Point Converter", "role":"Individual Project", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "C", "frameworks": "", "content": "This program uses C to take a double floating point value and use bit twiddling to store it into a floatx value with user-specified exponent and fraction bit sizes.<br><br>The floatx value will be stored in the right most bits of a double value, meaning that the total bits(exponent bits, fraction bits, and sign bit) have a maximum of 64. There must be at least 1 fraction bit and 1 exponent bit, and the minimum number of total bits is 3.<br><br>According to the IEEE standard, a double point floating values has 1 sign bit, 11 exponent bits, and 52 fraction bits. Some values may need more magnitude, i.e. more exponent bits, and less precision, i.e. less fraction bits, or vice versa. A value simply may not need the extent of precision and size given by a standard single or double floating point. <br><br>This project is an extension of a project from Binghamton University's CS220", "link":"https://github.com/bcchen52/floating-point-converter"},
 ]
+
+const all_experience = [
+    {"name": "Lambda Phi Epsilon", "role":"Academic Chair", "time":"March 2024-Present", "current": true, "content":"Did academic chair things"},
+    {"name": "Binghamton Tech Collective", "role":"Software Development Team", "time":"August 2024-...", "current": false, "content":"Upcoming"},
+    {"name": "Colorstack", "role":"Intern", "time":"August 2024-...", "current": false, "content":"Upcoming"},
+]
+
+const current_experience = [];
+const upcoming_experience = [];
+
+for (const experience of all_experience){
+    if (experience.current){
+        current_experience.push(experience);
+    } else {
+        upcoming_experience.push(experience);
+    }
+}
 
 console.log(current_classes[0].skills.length);
 
@@ -111,7 +129,7 @@ function create_classes(classes_array){
     const classes = document.querySelector('#classes-container');
     for (const course_info of classes_array) {
         const course = document.createElement('div');
-        course.setAttribute('class', 'course');
+        course.setAttribute('class', 'course shadow');
 
         const row = document.createElement('div');
         row.setAttribute('class', 'row justify-content-center');
@@ -135,7 +153,6 @@ function create_classes(classes_array){
         content_dropdown.style.display = 'none';
 
         add_info(course_info, content_dropdown, 'course');
-
 
         if (course_info.content.length != 0){
             content_dropdown.appendChild(document.createElement('hr'));
@@ -208,7 +225,7 @@ function create_projects() {
 
     for (const project_info of all_projects){
         const project = document.createElement('div');
-        project.setAttribute('class', 'project');
+        project.setAttribute('class', 'project container shadow');
 
         const heading = document.createElement('h2');
         heading.innerHTML = project_info.name;
@@ -217,8 +234,13 @@ function create_projects() {
         timestamp.setAttribute('class', 'timestamp');
         timestamp.innerHTML = project_info.time;
 
+        const info = document.createElement('div');
+        info.setAttribute('class', 'info');
+        info.innerHTML = `${project_info.role}, `
+        info.appendChild(timestamp);
+
         project.appendChild(heading);
-        project.appendChild(timestamp);
+        project.appendChild(info);
 
         add_info(project_info, project);
 
@@ -231,7 +253,7 @@ function create_projects() {
         project.appendChild(content);
 
         const link_text = document.createElement('div');
-        link_text.innerHTML = '<br>More info '
+        link_text.innerHTML = '<br>For more info, click '
         const link = document.createElement('a');
         link.setAttribute('href', project_info.link);
         link.setAttribute('target','_blank');
@@ -241,7 +263,7 @@ function create_projects() {
         link_text.appendChild(link);
         project.appendChild(link_text);
 
-        project.appendChild(document.createElement('hr'));
+        //project.appendChild(document.createElement('hr'));
 
         col.appendChild(project);
 
@@ -257,13 +279,64 @@ function create_projects() {
         nav.append(nav_item);
     }
 
-
-
     //do something with the nav bar
     nav_col.append(nav);
     row.appendChild(col);
     row.append(nav_col);
     projects.appendChild(row);
+}
+
+function create_experiences_page() {
+    const experiences = document.querySelector('#experiences-container');
+
+    const upcoming_experiences_heading = document.createElement('div');
+    upcoming_experiences_heading.setAttribute('class','row course-heading');
+    upcoming_experiences_heading.innerHTML = 'Upcoming Experience<hr>'
+
+    experiences.appendChild(upcoming_experiences_heading);
+
+    create_experiences(upcoming_experience);
+
+    const current_experiences_heading = document.createElement('div');
+    current_experiences_heading.setAttribute('class','row course-heading');
+    current_experiences_heading.innerHTML = 'Current Experience<hr>'
+
+    experiences.appendChild(current_experiences_heading);
+
+    create_experiences(current_experience);
+}
+
+function create_experiences(experiences_array) {
+    const experiences = document.querySelector('#experiences-container');
+    for (const experience_info of experiences_array){
+        const experience = document.createElement('div');
+        experience.setAttribute('class', 'experience container shadow');
+
+        const heading = document.createElement('h2');
+        heading.innerHTML = experience_info.name;
+
+        experience.appendChild(heading);
+
+        const role = document.createElement('div');
+        role.innerHTML = `${experience_info.role}, `;
+
+        const timestamp = document.createElement('span');
+        timestamp.setAttribute('class', 'timestamp');
+        timestamp.innerHTML = experience_info.time;
+
+        role.appendChild(timestamp);
+
+        experience.appendChild(role);
+
+        experience.appendChild(document.createElement('hr'));
+
+        const content = document.createElement('div');
+        content.innerHTML = experience_info.content;
+
+        experience.appendChild(content);
+
+        experiences.appendChild(experience);
+    }
 }
 
 //formats the skills/languages/frameworks for projects and classes

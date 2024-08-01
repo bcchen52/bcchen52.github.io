@@ -39,13 +39,12 @@ body {
 
 .course {
     border-width:1px;
-    border-radius:10px;
-    border-style:solid;
+    border-radius:20px;
+    border-style:hidden;
     padding: 10px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
-    
     width:100%;
 }
 
@@ -96,4 +95,31 @@ body {
 
 .content {
     font-size: 14px;
+}
+
+.experience {
+    margin-bottom: 30px;
+}
+
+.project {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.experience {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.timestamp {
+    font-style: italic;
+}
+
+.info {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
