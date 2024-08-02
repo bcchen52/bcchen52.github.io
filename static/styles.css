@@ -1,11 +1,54 @@
-
 body {
+    font-family: 'Poppins';
+    background-color: #1f1d2e;
+    color: #e0def4;
+}
+
+h1 {
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 50px;
+    color: #9ccfd8;
+}
+
+h2 {
+    color: #ebbcba;
+}
+h4 {
+    font-family: 'JetBrains Mono';
+    color: #c4a7e7;
+}
+
+a {
+    color: #f6c177;
+}
+
+.navbar-brand {
+    color: #9ccfd8;
+    font-size:30px;
+    pointer-events: none;
     font-family: 'Poppins';
 }
 
+.project {
+    background-color: #26233a;
+    color: #e0def4;
+}
+
+.experience {
+    background-color: #26233a;
+    color: #e0def4;
+}
+
 .navbar {
-    border-radius:20px;
+    border-radius:10px;
     border-width:2px;
+}
+
+.main-navbar {
+    margin-bottom:30px;
+    font-family: 'JetBrains Mono';
 }
 
 #content {
@@ -16,25 +59,41 @@ body {
     top: 10px;
 }
 
+.project-nav {
+    top:80px;
+}
+
 .active > span {
-    font-style:italic;
-    color:purple;
+    font-weight:bold;
+    color:#eb6f92;
+    pointer-events: none;
+}
+
+.nav-link {
+    color: #e0def4;
 }
 
 .nav-link:hover {
-    background-color:white;
-    color:blue;
+    font-weight:bold;
+    color:#ebbcba;
+}
+
+.project-link-active {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #eb6f92;
+    background-color: #6e6a86;
+    pointer-events: none;
 }
 
 .project-link {
-    width:110%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.project-link-span {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    overflow: hidden
+.project-link:hover {
+    background-color:#26233a;
+    color: #ebbcba; 
 }
 
 .course {
@@ -44,8 +103,9 @@ body {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
-
     width:100%;
+    background-color: #26233a;
+    color: #e0def4;
 }
 
 .course-code {
@@ -86,11 +146,7 @@ body {
 }
 
 .courses-mini-title {
-    font-weight: bold;
-}
-
-.project-link:hover {
-    color: purple;
+    color: #c4a7e7;
 }
 
 .content {
@@ -106,6 +162,7 @@ body {
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+    scroll-margin-top: 100px;
 }
 
 .experience {
@@ -116,10 +173,13 @@ body {
 }
 
 .timestamp {
-    font-style: italic;
+    color: #9ccfd8;
+    font-weight: bold;
+    font-family: 'JetBrains Mono';
 }
 
 .info {
     font-size: 15px;
     margin-bottom: 10px;
 }
+

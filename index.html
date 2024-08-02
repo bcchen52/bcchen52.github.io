@@ -6,26 +6,27 @@
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
         <link href="static/styles.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container" id="main">
-            <nav class="navbar sticky-top navbar-expand navbar-light bg-light">
+            <nav class="navbar main-navbar sticky-top navbar-expand top-nav navbar-dark bg-dark shadow">
                 <div class="container-fluid">
                     <span class="navbar-brand">Brian Chen</span>       
                         <ul class="navbar-nav me-auto mb-lg-0">
-                            <li class="nav-item main-nav" id="home">
-                                <span class="nav-link" aria-current="page">About Me</span>
+                            <li class="nav-item main-nav active" id="home">
+                                <span class="nav-link" aria-current="page">About</span>
                             </li>
-                            <li class="nav-item main-nav active" id="projects">
+                            <li class="nav-item main-nav" id="projects">
                                 <span class="nav-link" aria-current="page">Projects</span>
                             </li>
                             <li class="nav-item main-nav" id="classes">
-                                <span class="nav-link" aria-current="page">Classes</span>
+                                <span class="nav-link" aria-current="page">Courses</span>
                             </li>
                             <li class="nav-item main-nav" id="experiences">
-                                <span class="nav-link" aria-current="page">Experiences</span>
+                                <span class="nav-link" aria-current="page">Experience</span>
                             </li>
                         </ul>
                 </div>
@@ -34,24 +35,42 @@
                 <div id="home-container">
                     <div class="container">
                         <div id="home-heading">
-                            About Me
+                            <h1>About Me</h1>
                         </div>
                         <hr>
                         <div id="home-content">
-                            <p>My name is Brian Chen, and I a student at Binghamton University pursuing a BS degree in Computer Science '26 and a BA degree in Statistics '26. I plan to apply for Binghamton's 4+1 Master's program and pursue a Master's in Statistics in 2027.</p>
+                            <p>I am a student at Binghamton University pursuing a BS degree in Computer Science '26 and a BA degree in Statistics '26.</p>
+                            <p>Depending on my situation in the future, I plan to pursue a Master's Degree in Statistics('27) by way of Binghamton University's 4+1 Program.</p>
+                            <p>In the Projects tab, you can find summaries of past projects I've done with links to their Github repositories.</p>
+                            <p>In the Courses tab, you can find relevant courses I've taken and am currently taking. Clicking on each course will open a dropdown with more information, if applicable.</p>
+                            <p>In the Experience tab, you can find my current and upcoming experience.</p>
+                        </div>
+                        <div id="home-heading2">
+                            <h1>About This Site</h1>
                         </div>
                         <hr>
-                        <p>
-                            This is a static single-page website utilizing HTML, CSS(Bootstrap), and vanilla JavaScript.
-                        </p>
+                        <div id="home-content2">
+                            <p>This is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.</p>
+                            <p>The Projects, Courses, and Experience pages are fully loaded using JavaScript, allowing for easy updates.</p>
+                        </div>
+                        <br>
+                        <h4>Projects Page</h4>
+                        <hr>
+                            <p>The Projects page utilizes Bootstrap's container property to display the projects and project navbar. This is responsive and the navbar disappears when the screen is small enough.</p>
+                            <p>The Projects page also features a scrollspy functionality on the projects navbar, created with vanilla Javascript. This means that the projects navbar will activate in response to what is on the screen.</p>
+                            <p>This is done by adding a function to JavaScript's window.onscroll, which is called whenever the screen is scrolled. The function then checks if the top of any project's container is in the range of 60-200px from the top of the screen, with 60px being slightly above the bottom of the main nav bar. Because this function is called whenever the screen is moved, clicking on a project's link will cause the projects inbetween that project and the current project on the screen to be highlighted.</p>
+                        <br>
+                        <h4>Courses Page</h4>
+                        <hr>
+                            <p>The Courses page utilizies Bootstrap's container property to collapse and change the view of each classes' information when screen shrinks.</p>
+                            <p>If a course has more information, clicking on it will change the display of the container holding that information to 'block', and displaying that information.</p>
+                        <br>
                     </div>
+
                 </div>
-                <div class="container" id="projects-container">
-                </div>
-                <div class="container" id="classes-container">
-                </div>
-                <div class="container" id="experiences-container">
-                </div>
+                <div class="container" id="projects-container"></div>
+                <div class="container" id="classes-container"></div>
+                <div class="container" id="experiences-container"></div>
             </div>
         </div>
         <script src="static/styles.js"></script>
