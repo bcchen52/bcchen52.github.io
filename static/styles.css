@@ -24,6 +24,17 @@ a {
     color: #f6c177;
 }
 
+footer {
+    font-family: 'JetBrains Mono';
+    background-color: #191724;
+}
+
+footer a {text-decoration: none;}
+
+.footer-text {
+    color: #9ccfd8;
+}
+
 .navbar-brand {
     color: #9ccfd8;
     font-size:30px;
