@@ -1,5 +1,7 @@
 # bcchen52.github.io
 
+[brianchen.org](brianchen.org)
+
 This is a static and user-responsive single-page website made with HTML, CSS(Bootstrap), and vanilla Javascript.
 
 The front-end utilizes JavaScript to interact with posts and CSS to animate elements.
