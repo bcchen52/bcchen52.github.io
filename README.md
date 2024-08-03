@@ -24,6 +24,12 @@ None
 
 [Link to site](bcchen52.github.io)
 
+Each page is split into their respective `SECTION-container`. Only the `About` page, stored in the `home-container`, is written in HTML. 
+
+To use your own information in a similar website, simply fill the `all_projects`, `all_experience`, and `all_classes` arrays at the top of the JavaScript file with your own information following the existing format.
+
+In 
+
 ## Functionality
 #### Projects Page
 The Projects page utilizes Bootstrap's container property to display the projects and project navbar. This is responsive and the navbar disappears when the screen is small enough.
