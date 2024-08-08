@@ -1,6 +1,6 @@
 # bcchen52.github.io
 
-[brianchen.org](brianchen.org)
+[brianchen.org](https://brianchen.org)
 
 This is a static and user-responsive single-page website made with HTML, CSS(Bootstrap), and vanilla Javascript.
 
