@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     create_classes_page();
     create_projects();
     create_experiences_page();
-    //console.log('hello');
 
     document.querySelectorAll('.main-nav').forEach((button) => {
         button.onclick = () => {
@@ -11,12 +10,27 @@ document.addEventListener('DOMContentLoaded', function() {
             //if (button.classList.contains('nav-item')) {
               //  button.classList.add('active');
             //}
+            if (button.id==="home"){
+                console.log('yo');
+                button.src = "media/logo-clicked.png";
+            }
             button.classList.add('active');
             change_view(button.id);
         }
     });
 
-    //animate
+    document.querySelector('#home').onmouseover = (event) => {
+        event.currentTarget.src = "media/logo-hover.png";
+    }
+
+    document.querySelector('#home').onmouseout = (event) => {
+        //clicking triggers onmouseout, so we need to distinguish from when we hover vs when we click
+        if (event.currentTarget.src.includes('hover')){
+            event.currentTarget.src = "media/logo-empty.png";
+        }
+    }
+
+    //animate   
         // hide everything
         // if screen is large enough, include certain features
 
@@ -29,16 +43,17 @@ document.addEventListener('DOMContentLoaded', function() {
     //width - 50px
     
     const all_skills = [
-        {'order': 0, 'link': "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"},
-        {'order': 1, 'link': "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"},
-        {'order': 2, 'link': "https://upload.wikimedia.org/wikipedia/commons/7/7a/JavaScript_unofficial_logo.svg"},
-        {'order': 3, 'link': "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"},
-        {'order': 4, 'link': "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"},
-        {'order': 5, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"},
-        {'order': 6, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"},
-        {'order': 7, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"},
-        {'order': 8, 'link': "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"},
-        {'order': 9, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg"},
+        {'name': 'C', 'order': 0, 'link': "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"},
+        {'name': 'HTML', 'order': 1, 'link': "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"},
+        {'name': 'JavaScript', 'order': 2, 'link': "https://upload.wikimedia.org/wikipedia/commons/7/7a/JavaScript_unofficial_logo.svg"},
+        {'name': 'CSS', 'order': 3, 'link': "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"},
+        {'name': 'Java', 'order': 4, 'link': "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"},
+        {'name': 'Python', 'order': 5, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"},
+        {'name': 'R','order': 6, 'link': "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg"},
+        {'name': 'Amazon Web Services', 'order': 7, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"},
+        {'name': 'Github/Git/Pages', 'order': 8, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"},
+        {'name': 'PostgreSQL', 'order': 9, 'link': "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"},
+        {'name': 'SQLite','order': 10, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg"},
     ]
 
     //given any current position, get five 
@@ -92,14 +107,34 @@ function carousel(all_skills, move){
     //console.log(current_list);
 
     //doing the resizing of 5 icons previously mentioned
+
+    const new_icon_width = (Number(icon_bar_width))/5;
     if (desired_length == 5){
         //first get five, then populate
-        const new_icon_width = (Number(icon_bar_width))/5;
         document.querySelectorAll('.icon').forEach((icon)=>{
             icon.style.height = `${new_icon_width}px`;
             icon.style.width = `${new_icon_width}px`;
         });
     } 
+
+    document.querySelectorAll('.icon').forEach((icon)=>{
+        const text = document.querySelector('#icons-title');
+        icon.onmouseover = () => {
+            icon.style.height = `${new_icon_width+4}px`;
+            icon.style.width = `${new_icon_width+4}px`;
+            icon.style.padding = `0px`;
+            text.innerHTML = icon.getAttribute('alt');
+        }
+        icon.onmouseout = () => {
+            icon.style.height = `${new_icon_width}px`;
+            icon.style.width = `${new_icon_width}px`;
+            icon.style.padding = `2px`;
+            text.innerHTML = "Tech Stack";
+        }
+        icon.onclick = () => {
+            window.open(`https://www.google.com/search?q=${icon.getAttribute('alt')}`, '_blank').focus();
+        }
+    });
 }
 
 carousel.state = {
@@ -150,6 +185,7 @@ function populate_icons(icon_list, direction){
         icon_background.setAttribute('class', 'col-auto icon-background');
         const icon_img = document.createElement('img');
         icon_img.setAttribute('class', 'icon');
+        icon_img.setAttribute('alt', `${icon['name']}`);
         icon_img.setAttribute('src', `${icon['link']}`);
         if (direction){
             icon_img.style.opacity = '0';
@@ -287,12 +323,15 @@ function change_view(view) {
 function unclick_buttons(button_type) {
     if (button_type==='.main-nav') {
         document.querySelectorAll('.main-nav').forEach((item) => {
+            if (item.id==="home"){
+                item.setAttribute('src', 'media/logo-empty.png');
+            } 
             item.classList.remove('active');
-        })
+        });
     }
 }
 
-function create_classes_page() {
+function create_classes_page(all_classes) {
     const classes = document.querySelector('#classes-container');
 
     const heading = document.createElement('h1');
@@ -395,7 +434,6 @@ function create_classes(classes_array){
                 content_dropdown.style.display = 'block';
             }
         }
-
         classes.appendChild(course);
     }
 }
