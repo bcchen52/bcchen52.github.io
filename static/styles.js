@@ -8,14 +8,184 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.main-nav').forEach((button) => {
         button.onclick = () => {
             unclick_buttons('.main-nav');
-            if (button.classList.contains('nav-item')) {
-                button.setAttribute('class','nav-item main-nav active');
-            }
+            //if (button.classList.contains('nav-item')) {
+              //  button.classList.add('active');
+            //}
+            button.classList.add('active');
             change_view(button.id);
         }
     });
 
+    //animate
+        // hide everything
+        // if screen is large enough, include certain features
+
+    //on resize
+        // hide/show
+
+    //scrollable technologies abr
+
+    //if we want five, given the padding=5px for each side, if we want 5 icons....
+    //width - 50px
+    
+    const all_skills = [
+        {'order': 0, 'link': "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"},
+        {'order': 1, 'link': "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"},
+        {'order': 2, 'link': "https://upload.wikimedia.org/wikipedia/commons/7/7a/JavaScript_unofficial_logo.svg"},
+        {'order': 3, 'link': "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"},
+        {'order': 4, 'link': "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"},
+        {'order': 5, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"},
+        {'order': 6, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"},
+        {'order': 7, 'link': "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"},
+        {'order': 8, 'link': "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"},
+        {'order': 9, 'link': "https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg"},
+    ]
+
+    //given any current position, get five 
+
+    carousel(all_skills);
+
+    window.onresize = () => {
+        carousel(all_skills);
+    }
+
+    document.querySelectorAll('.arrow-icon').forEach((arrow)=>{
+        console.log(arrow.id === 'left');
+        arrow.onclick = () => {
+            carousel.state.move(arrow.id, 9);
+            carousel(all_skills, arrow.id);
+        }
+    })
+
 });
+
+function carousel(all_skills, move){
+    const icon_bar = document.querySelector('#icon-bar');
+
+    //find how many icons you can fit if each were 110(80px + 15px margin each side)
+    let desired_length = Math.floor(icon_bar.getBoundingClientRect().width/110);
+
+    if (move) {
+        desired_length = carousel.state.length;
+    } 
+
+    if (desired_length < 5){
+        desired_length = 5;
+    }
+    
+    //given the desired length, find the space you're working with
+    const icon_bar_width = icon_bar.getBoundingClientRect().width - (desired_length*30);
+
+    //ideally, we want each icon to have a width of 100px, to fit atleast 5 icons
+    
+
+    //get a list with desired_length icons. If desired_length < 5, it will give us a list of 5, and we will instead resize those 5 icons to fit
+    const current_list = get_current_list(carousel.state.first_order, desired_length, all_skills);
+    
+    //if we are changing the number of icons, we need to clear the icons and reinitialize them
+    if (desired_length != carousel.state.length || move){
+        carousel.state.change_length(desired_length);
+        icon_bar.innerHTML = "";
+        populate_icons(current_list, move);
+    }
+
+    //console.log(current_list);
+
+    //doing the resizing of 5 icons previously mentioned
+    if (desired_length == 5){
+        //first get five, then populate
+        const new_icon_width = (Number(icon_bar_width))/5;
+        document.querySelectorAll('.icon').forEach((icon)=>{
+            icon.style.height = `${new_icon_width}px`;
+            icon.style.width = `${new_icon_width}px`;
+        });
+    } 
+}
+
+carousel.state = {
+    first_order : 0,
+    length: 0,
+    change_length: (length)=>{
+        carousel.state.length = length;
+    },
+    move: (direction, max)=>{
+        if (direction=='left'){
+            if (carousel.state.first_order == 0){
+                carousel.state.first_order = max;
+            } else {
+                carousel.state.first_order --;
+            }
+        } else {
+            if (carousel.state.first_order == max){
+                carousel.state.first_order = 0;
+            } else {
+                carousel.state.first_order ++;
+            }
+        }
+    },
+}
+//get a new array of 5 icons starting at first_order
+function get_current_list(first_order, desired_length, all_skills){
+    let current_list = [];
+    const length = all_skills.length;
+    if (first_order + desired_length <= length){
+        for (let i=0; i<desired_length;i++ ){
+            current_list.push(all_skills[first_order+i]);
+        }
+    } else {
+        for (let i=0; i<length-first_order;i++ ){
+            current_list.push(all_skills[first_order+i]);
+        }
+        for (let i=0; i<desired_length-(length-first_order);i++ ){
+            current_list.push(all_skills[i]);
+        }
+    }
+    return current_list;
+}
+
+function populate_icons(icon_list, direction){
+    const icon_row = document.querySelector('#icon-bar');
+    icon_list.forEach((icon)=>{
+        const icon_background = document.createElement('div');
+        icon_background.setAttribute('class', 'col-auto icon-background');
+        const icon_img = document.createElement('img');
+        icon_img.setAttribute('class', 'icon');
+        icon_img.setAttribute('src', `${icon['link']}`);
+        if (direction){
+            icon_img.style.opacity = '0';
+        }
+        icon_background.appendChild(icon_img);
+        icon_row.appendChild(icon_background);
+        //icon_img.animate([{left: '20px', opacity:'0'},{left : '0%', opacity:1}],{duration:200});
+    });
+    if (direction) {
+        var promise = Promise.resolve();
+
+        let icons = document.querySelectorAll('.icon');
+        if (direction==='right'){
+            icons = [...icons];
+            icons = icons.reverse();
+        }
+
+        icons.forEach((icon)=>{
+            promise = promise.then(function () {
+                if (direction=='left'){
+                    icon.animate([{left: '20px', opacity:'0'},{left : '0%', opacity:1}],{duration:200});
+                } else {
+                    icon.animate([{right: '20px', opacity:'0'},{right : '0%', opacity:1}],{duration:200})
+
+                }
+                icon.style.opacity=1;     
+                return new Promise(function (resolve) {
+                    setTimeout(resolve, 50);
+                });
+            });
+        });
+    }
+}
+
+
+//given these 8, create a carousel
 
 const all_classes = [
     {"code": "CS50AI", "title": "Introduction to Artificial Intelligence with Python", "info": "Harvard University Online Course", "skills": "", "languages": "Python", "frameworks": "", "projects": "", "content": "Harvard University's introductory online course on artificial intelligence. <div>More info <a href='https://cs50.harvard.edu/ai/2024/' target='_blank' rel='noopener noreferrer'>here.</a></div>", "current": true,},
@@ -77,6 +247,7 @@ function home(){
 }
 
 function change_view(view) {
+    console.log(view);
     window.scroll(0,0);
     document.querySelector('#home-container').style.display = "none";
     document.querySelector('#projects-container').style.display = "none";
@@ -116,7 +287,7 @@ function change_view(view) {
 function unclick_buttons(button_type) {
     if (button_type==='.main-nav') {
         document.querySelectorAll('.main-nav').forEach((item) => {
-            item.setAttribute('class','nav-item main-nav');
+            item.classList.remove('active');
         })
     }
 }

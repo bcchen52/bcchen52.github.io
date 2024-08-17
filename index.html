@@ -16,9 +16,9 @@
     </head>
     <body>
         <div class="container" id="main">
-            <nav class="navbar main-navbar sticky-top navbar-expand-sm top-nav navbar-dark bg-dark shadow">
+            <nav class="navbar main-navbar sticky-top navbar-expand-sm top-nav navbar-dark shadow">
                 <div class="container-fluid">
-                    <span class="navbar-brand">
+                    <span class="navbar-brand main-nav" id="home">
                         Brian Chen
                     </span>       
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +26,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav me-auto mb-lg-0">
-                            <li class="nav-item main-nav active" id="home">
-                                <span class="nav-link" aria-current="page">About</span>
-                            </li>
                             <li class="nav-item main-nav" id="projects">
                                 <span class="nav-link" aria-current="page">Projects</span>
                             </li>
@@ -43,42 +40,70 @@
                 </div>
             </nav>
             <div class="container" id="content">
-                <div id="home-container">
-                    <div class="container">
-                        <div id="home-heading">
-                            <h1>About Me</h1>
+                <div class="container" id="home-container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-10">
+                            <div class="row justify-content-between">
+                                <div class="col-4 profile-picture d-md-flex d-none my-auto">
+                                    <img style="width:100%;"src="media/full-transformed.png">
+                                </div>
+                                <div class="col-md-8 col-12 info-card about">
+                                    <h2>Who am I?</h2> 
+                                    <p>I am a fullstack web developer and a CS and Statistics student at Binghamton University('26).</p>
+                                    <p>I have experience and work with Django, JavaScript, HTML, CS, and SQL to create dynamic web applications.</p>
+                                    <p>I also have experience with Java, C, R, and Python. </p>
+                                </div>
+                            </div>
                         </div>
-                        <hr>
-                        <div id="home-content">
-                            <p>I am a student at Binghamton University pursuing a BS degree in Computer Science '26 and a BA degree in Statistics '26.</p>
-                            <p>Depending on my situation in the future, I plan to pursue a Master's Degree in Statistics('27) by way of Binghamton University's 4+1 Program.</p>
-                            <p>In the Projects tab, you can find summaries of past projects I've done with links to their Github repositories.</p>
-                            <p>In the Courses tab, you can find relevant courses I've taken and am currently taking. Clicking on each course will open a dropdown with more information, if applicable.</p>
-                            <p>In the Experience tab, you can find my current and upcoming experience.</p>
+                    </div>
+                    <div class="row justify-content-center flex-nowrap">
+                        <div class="col-auto text-center my-auto">
+                            <i class="arrow-icon fa-solid fa-arrow-left" id="left"></i>
                         </div>
-                        <div id="home-heading2">
-                            <h1>About This Site</h1>
+                        <div class="col-lg-8 col-10" id="icon-bar-col">
+                            <div class="row justify-content-center flex-nowrap info-card icons-bar" id="icon-bar">
+                            </div>
                         </div>
-                        <hr>
-                        <div id="home-content2">
-                            <p>This is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.</p>
-                            <p>The Projects, Courses, and Experience pages are fully loaded using JavaScript, allowing for easy updates.</p>
+                        <div class="col-auto text-center my-auto">
+                            <i class="arrow-icon fa-solid fa-arrow-right" id="right"></i>
                         </div>
-                        <br>
-                        <h4>Projects Page</h4>
-                        <hr>
-                            <p>The Projects page utilizes Bootstrap's container property to display the projects and project navbar. This is responsive and the navbar disappears when the screen is small enough.</p>
-                            <p>The Projects page also features a scrollspy functionality on the projects navbar, created with vanilla Javascript. This means that the projects navbar will activate in response to what is on the screen.</p>
-                            <p>This is done by adding a function to JavaScript's window.onscroll, which is called whenever the screen is scrolled. The function then checks if the top of any project's container is in the range of 60-200px from the top of the screen, with 60px being slightly above the bottom of the main nav bar. Because this function is called whenever the screen is moved, clicking on a project's link will cause the projects inbetween that project and the current project on the screen to be highlighted.</p>
-                        <br>
-                        <h4>Courses Page</h4>
-                        <hr>
-                            <p>The Courses page utilizies Bootstrap's container property to collapse and change the view of each classes' information when screen shrinks.</p>
-                            <p>If a course has more information, clicking on it will change the display of the container holding that information to 'block', and displaying that information.</p>
-                        <br>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center my-auto">
+                            <i class="arrow-project fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="col-lg-8 col-10 info-card">
+                            <h2>Projects</h2> 
+                            <hr>                          
+                        </div>
+                        <div class="col-auto text-center my-auto">
+                            <i class="arrow-project fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
 
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-10 info-card">
+                            <h2>About This Site</h2>
+                            <hr>
+
+                            <p>This is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.</p>
+                            <p>The Projects, Courses, and Experience pages are fully loaded using JavaScript, allowing for easy updates.</p>
+                            <p>The responsive carousel feature for the icons and projects on this page were fully created with vanilla JavaScript.</p>
+                            <h4>Projects Page</h4>
+                            <hr>
+                                <p>The Projects page utilizes Bootstrap's container property to display the projects and project navbar. This is responsive and the navbar disappears when the screen is small enough.</p>
+                                <p>The Projects page also features a scrollspy functionality on the projects navbar, created with vanilla Javascript. This means that the projects navbar will activate in response to what is on the screen.</p>
+                                <p>This is done by adding a function to JavaScript's window.onscroll, which is called whenever the screen is scrolled. The function then checks if the top of any project's container is in the range of 60-200px from the top of the screen, with 60px being slightly above the bottom of the main nav bar. Because this function is called whenever the screen is moved, clicking on a project's link will cause the projects inbetween that project and the current project on the screen to be highlighted.</p>
+                            <br>
+                            <h4>Courses Page</h4>
+                            <hr>
+                                <p>The Courses page utilizies Bootstrap's container property to collapse and change the view of each classes' information when screen shrinks.</p>
+                                <p>If a course has more information, clicking on it will change the display of the container holding that information to 'block', and displaying that information.</p>
+                            <br>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="container" id="projects-container"></div>
                 <div class="container" id="classes-container"></div>
                 <div class="container" id="experiences-container"></div>
