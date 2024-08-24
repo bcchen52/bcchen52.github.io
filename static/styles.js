@@ -92,15 +92,18 @@ function carousel(all_skills, move){
 
     //doing the resizing of 5 icons previously mentioned
 
-    const new_icon_width = (Number(icon_bar_width))/desired_length;
+    let new_icon_width = 80;
     if (desired_length == 5){
         //first get five, then populate
+        if ((Number(icon_bar_width))/desired_length < 80){
+            new_icon_width = (Number(icon_bar_width))/desired_length;
+        }
         document.querySelectorAll('.icon').forEach((icon)=>{
             icon.style.height = `${new_icon_width}px`;
             icon.style.width = `${new_icon_width}px`;
         });
     } 
-    console.log(new_icon_width);
+    //console.log(new_icon_width);
 
     document.querySelectorAll('.icon').forEach((icon)=>{
         const projects_text = document.querySelector('#icons-info');
@@ -114,9 +117,11 @@ function carousel(all_skills, move){
             }
         }
         icon.onmouseout = () => {
+            console.log(new_icon_width);
             icon.style.height = `${new_icon_width}px`;
             icon.style.width = `${new_icon_width}px`;
             icon.style.padding = `2px`;
+            console.log(icon.style.height);
             if (!carousel.state.clicked) {
                 text.innerHTML = "Tech Stack";
             }
