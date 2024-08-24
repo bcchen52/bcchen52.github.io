@@ -38,6 +38,22 @@ footer {
 
 footer a {text-decoration: none;}
 
+.icons-info {
+    margin-top: 10px;
+}
+
+.icon-link {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.icon-link:hover {
+    font-size: 18px;
+    color: purple;
+}
+
 .arrow-icon {
     font-size: 25px;
     color: white;
@@ -46,7 +62,6 @@ footer a {text-decoration: none;}
 .footer-text {
     color: #9ccfd8;
 }
-
 
 .profile-picture {
     padding: 5px;
@@ -66,6 +81,14 @@ footer a {text-decoration: none;}
     border-radius:2px;
 }
 
+#icons-title {
+    color: #3700b3;
+}
+
+#icons-info{
+    color: #3700b3;
+}
+
 .info-card {
     margin-top:5px;
     margin-bottom:5px;
@@ -76,6 +99,7 @@ footer a {text-decoration: none;}
 
 .icons-bar {
     background-color: #FFFFFF;
+    padding:5px;
 }
 
 #projects-nav {
