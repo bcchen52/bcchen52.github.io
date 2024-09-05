@@ -2,33 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const all_experience = [
         {"name": "Lambda Phi Epsilon Fraternity", "role":"Academic Chair", "time":"March 2024-Present", "current": true, "content":"<ul><li>Ensured that members and potential new members maintianed high GPAs by mandating study hours based on performance.</li><li>Provided resources and connected members to campus resources when necessary.</li></ul>"},
-        {"name": "Binghamton Tech Collective", "role":"Software Engineering Team", "time":"August 2024-Present", "current": false, "content":"Upcoming"},
-        {"name": "Colorstack", "role":"Intern", "time":"August 2024-Present", "current": false, "content":"Upcoming"},
+        {"name": "Binghamton Tech Collective", "role":"Software Engineering Team", "time":"August 2024-Present", "current": true, "content":"Upcoming"},
+        {"name": "Colorstack", "role":"Intern", "time":"August 2024-Present", "current": true, "content":"Upcoming"},
     ];
 
     const all_classes = [
         {"code": "CS50AI", "title": "Introduction to Artificial Intelligence with Python", "info": "Harvard University Online Course", "skills": "", "languages": "Python", "frameworks": "", "projects": "", "content": "Harvard University's introductory online course on artificial intelligence. <div>More info <a href='https://cs50.harvard.edu/ai/2024/' target='_blank' rel='noopener noreferrer'>here.</a></div>", "current": true,},
-        {"code": "CS50W", "title": "Web Programming with Python and JavaScript", "info": "Harvard University Online Course", "skills": "Front-end Development, Back-end Development", "languages": "JavaScript, HTML, CSS, Python, SQL", "frameworks": "Django, SQLite, Bootstrap, React", "projects": ["Mail", "Network", "Multiplix"], "content": "Awaiting certificate. Harvard University's online course on full stack web development. <div>More info <a href='https://cs50.harvard.edu/web/2020/' target='_blank' rel='noopener noreferrer'>here.</a></div>", "current": true,},
+        {"code": "CS50W", "title": "Web Programming with Python and JavaScript", "info": "Harvard University Online Course", "skills": "Front-end Development, Back-end Development", "languages": "JavaScript, HTML, CSS, Python, SQL", "frameworks": "Django, SQLite, Bootstrap, React", "projects": ["mail-app", "network-app", "multiplix"], "content": "Awaiting certificate. Harvard University's online course on full stack web development. <div>More info <a href='https://cs50.harvard.edu/web/2020/' target='_blank' rel='noopener noreferrer'>here.</a></div>", "current": true,},
         {"code": "MATH 447", "title": "Probability Theory", "info": "Binghamton Univerity Course", "skills": "", "languages": "", "frameworks": "", "projects": "", "content": "", "current": true,},
         {"code": "CS 320", "title": "Advanced Computer Architecture", "info": "Binghamton Univerity Course", "skills": "", "languages": "", "frameworks": "", "projects": "", "content": "", "current": true,},
         {"code": "CS 310", "title": "Data Struct and Algorithms", "info": "Binghamton Univerity Course", "skills": "", "languages": "", "frameworks": "", "projects": "", "content": "", "current": true,},
         {"code": "N/A", "title": "Introduction to Machine Learning", "info": "Binghamton University Online Course/Microcredential", "skills": "Probability Theory, Machine Learning Algorithms and Concepts, Regression", "languages": "", "frameworks": "", "projects": "", "content": "Certification badge <a href='https://www.credly.com/badges/f381ca72-361c-42a9-8aaa-a2dde0af4fe7' target='_blank' rel='noopener noreferrer'>here.</a>", "current": false,},
         {"code": "MATH 330", "title": "Number Systems", "info": "Binghamton Univerity Course", "skills": "Set Theory, Number Theory, Proofwriting, Real Analysis, General/Point-set Topology", "languages": "", "frameworks": "", "projects": "", "content": "More info <a href='https://people.math.binghamton.edu/mfochler/bu-mfx/bu-math-arv/math-330-arv/math-330-2024-02/html/math-330-home.html' target='_blank' rel='noopener noreferrer'>here.</a>", "current": false,},
-        {"code": "MATH 329", "title": "Intro to Scientific Computing", "info": "Binghamton Univerity Course", "skills": "Regression Analysis ", "languages": "R", "frameworks": "", "projects": ["Dataset Regression Analysis"], "content": "", "current": false,},
+        {"code": "MATH 329", "title": "Intro to Scientific Computing", "info": "Binghamton Univerity Course", "skills": "Regression Analysis ", "languages": "R", "frameworks": "", "projects": ["dataset-regression-analysis"], "content": "", "current": false,},
         {"code": "MATH 323", "title": "Calculus III", "info": "Binghamton Univerity Course", "skills": "", "languages": "", "frameworks": "", "projects": "", "content": "", "current": false,},
         {"code": "MATH 304", "title": "Linear Algebra", "info": "Binghamton Univerity Course", "skills": "", "languages": "", "frameworks": "", "projects": "", "content": "", "current": false,},
-        {"code": "CS 220", "title": "Arch from a Prog Perspective", "info": "Binghamton Univerity Course", "skills": "Low-Level Programming, Processor and Memory Organization, Code Dissembly", "languages": "C, x86 assembly", "frameworks": "", "projects": ["Floating Point Converter"], "content": "", "current": false,},
+        {"code": "CS 220", "title": "Arch from a Prog Perspective", "info": "Binghamton Univerity Course", "skills": "Low-Level Programming, Processor and Memory Organization, Code Dissembly", "languages": "C, x86 assembly", "frameworks": "", "projects": ["floating-point-converter"], "content": "", "current": false,},
         {"code": "CS 210", "title": "Prog with Obj & Data", "info": "Binghamton Univerity Course", "skills": "", "languages": "Java", "frameworks": "", "projects": "", "content": "", "current": false,},
         {"code": "CS 120", "title": "Prog & Hardware Fundamentals", "info": "Binghamton Univerity Course", "skills": "", "languages": "C", "frameworks": "", "projects": "", "content": "", "current": false,},
     ];
 
     const all_projects = [
-        {"code": "multiplix", "name": "MultipliX", "role":"Individual Project", "time":"August 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation, Website Hosting", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite, Gunicorn, Nginx", "content": "Link here <a href='https://multiplix.net'>multiplix.net</a><br><br>MultipliX is a website that allows users to customize mental math tests and compete with others. This takes inspiration from the website MonkeyType, which allows users to customize their experience and their touch-typing tests Websites that allow you to test mental math ability tend to be simpler and not as advanced as touch-typing sites typically are.<br><br>MultipliX uses Django with a PostgreSQL database on the backend. The frontend uses Bootstrap and vanilla JavaScript for user responsiveness and single-page views. <br><br>MultipliX is hosted on an AWS EC2 instance using Gunicorn and Nginx, following this tutorial. Https functionality is implented with Certbot.<br><br>Features include...<br><br>Responsive input handling on test settings page and login/registration using JavaScript.<br><br>Implementing SQL databases to allow user's tests to compete on leaderboards.<br><br>Responsive spacing for mobile users.", "link":"https://github.com/bcchen52/multiplix"},
-        {"code": "personal-website", "name": "brianchen.org", "role":"Individual Project", "time":"August 2024-Present", "skills": "Front-end Development, Responsive Design", "languages": "HTML, CSS, JavaScript", "frameworks": "Bootstrap", "content": "This is the <a href='https://www.brianchen.org'>site</a> you are currently viewing.<br><br> This site is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.<br><br> This site is used as a personal website to display information about myself.<br><br> More information on the About page.", "link":"https://github.com/bcchen52/bcchen52.github.io"},
-        {"code": "network-app", "name": "Network App", "role":"Individual Project", "time":"July 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Network is a single-page Twitter-like social network that allows users to post, follow other users, and interact with posts.<br><br>The front-end utilizes JavaScript to interact with posts and CSS to animate elements.<br><br>The back-end utilizes Django to create and serve API calls that are used to store and represent post and user data, as well as providing information about the current user and session.<br><br>Network is project 4 from Harvard University's CS50W, and basic login/register/logout functions were included in the starter code.<br><br>This project is an extension of project 4, Network from Harvard University's CS50W", "link":"https://github.com/bcchen52/network"},
-        {"code": "mail-app", "name": "Mail App", "role":"Individual Project", "time":"July 2024", "skills": "Front-end Web Development, Responsive Design", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Mail is a single-page email application that allows users to send emails to each other through API calls.<br><br>Users send and interact with emails through the front-end and JavaScript, which makes API calls with Django. Users can send, archive, and reply to emails.<br><br><video width='80%' src='media/Mail.mp4' controls >Video not supported.</video><br><br>This project is an extension of project 3, Mail from Harvard University's CS50W", "link":"https://github.com/bcchen52/mail"},
-        {"code": "floating-point-converter", "name": "Floating Point Converter", "role":"Individual Project", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "C", "frameworks": "", "content": "This program uses C to take a double floating point value and use bit twiddling to store it into a floatx value with user-specified exponent and fraction bit sizes.<br><br>The floatx value will be stored in the right most bits of a double value, meaning that the total bits(exponent bits, fraction bits, and sign bit) have a maximum of 64. There must be at least 1 fraction bit and 1 exponent bit, and the minimum number of total bits is 3.<br><br>According to the IEEE standard, a double point floating values has 1 sign bit, 11 exponent bits, and 52 fraction bits. Some values may need more magnitude, i.e. more exponent bits, and less precision, i.e. less fraction bits, or vice versa. A value simply may not need the extent of precision and size given by a standard single or double floating point. <br><br>This project is an extension of a project from Binghamton University's CS220", "link":"https://github.com/bcchen52/floating-point-converter"},
-        {"code": "dataset-regression-analysis", "name": "Dataset Regression Analysis", "role":"Individual Project", "time":"June 2024-July 2024", "skills": "Regression Analysis, Model Fitting", "languages": "R", "frameworks": "R Studio", "content": "This is a report-style linear regression analysis on the Hitters dataset from R's ISLR package.<br><br> This report includes a full exploratory analysis of the data and uses regression analysis to transform and create a regression model to accurately fit the data.<br><br><object data='your_url_to_pdf' type='application/pdf'><iframe src='media/finalprojectreport_brian_chen.pdf' width='80%' height='500px'></iframe></object><br><br>This project is the final project from Binghamton University's MATH329 ", "link":"https://github.com/bcchen52/hitters-regression-analysis"},
+        {"code": "multiplix", "name": "MultipliX", "role":"Individual Project", "blurb":"Responsive web application that allows users to customize and take mental math tests and compete with others while giving feedback on user's performance based on the type of question.", "time":"August 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation, Website Hosting", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite, Gunicorn, Nginx", "content": "Link here <a href='https://multiplix.net'>multiplix.net</a><br><br>MultipliX is a website that allows users to customize mental math tests and compete with others. This takes inspiration from the website MonkeyType, which allows users to customize their experience and their touch-typing tests Websites that allow you to test mental math ability tend to be simpler and not as advanced as touch-typing sites typically are.<br><br>MultipliX uses Django with a PostgreSQL database on the backend. The frontend uses Bootstrap and vanilla JavaScript for user responsiveness and single-page views. <br><br>MultipliX is hosted on an AWS EC2 instance using Gunicorn and Nginx, following this tutorial. Https functionality is implented with Certbot.<br><br>Features include...<br><br>Responsive input handling on test settings page and login/registration using JavaScript.<br><br>Implementing SQL databases to allow user's tests to compete on leaderboards.<br><br>Responsive spacing for mobile users.", "link":"https://github.com/bcchen52/multiplix"},
+        {"code": "personal-website", "name": "brianchen.org", "role":"Individual Project", "blurb":"Responsive single-page application created with JavaScript that serves as a personal website.<br><br>Responsive features created with vanilla JavaScript include this carousel and the Tech Stack carousel, and the scroll-spy feature on the Projects page.", "time":"August 2024-Present", "skills": "Front-end Development, Responsive Design", "languages": "HTML, CSS, JavaScript", "frameworks": "Bootstrap", "content": "This is the <a href='https://www.brianchen.org'>site</a> you are currently viewing.<br><br> This site is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.<br><br> This site is used as a personal website to display information about myself.<br><br> More information on the About page.", "link":"https://github.com/bcchen52/bcchen52.github.io"},
+        {"code": "network-app", "name": "Network App", "role":"Individual Project", "blurb":"Responsive single-page social media application. Users can post, like posts, edit posts, and follow other users on their feed.<br><br>JavaScript on the frontend allows those small user actions to be displayed without needing to reload the page.", "time":"July 2024", "skills": "Full Stack Web Development, Responsive Design, Database and API Manipulation", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Network is a single-page Twitter-like social network that allows users to post, follow other users, and interact with posts.<br><br>The front-end utilizes JavaScript to interact with posts and CSS to animate elements.<br><br>The back-end utilizes Django to create and serve API calls that are used to store and represent post and user data, as well as providing information about the current user and session.<br><br>Network is project 4 from Harvard University's CS50W, and basic login/register/logout functions were included in the starter code.<br><br>This project is an extension of project 4, Network from Harvard University's CS50W", "link":"https://github.com/bcchen52/network"},
+        {"code": "mail-app", "name": "Mail App", "role":"Individual Project", "blurb":"Single-page application utilizing API calls in Django to create an email network. Users can read, archive, and reply to emails.<br><br>Users can choose to reply or reply all if applicable, and can CC and forward emails.", "time":"July 2024", "skills": "Front-end Web Development, Responsive Design", "languages": "HTML, CSS, Python, SQL, JavaScript", "frameworks": "Django, Bootstrap, SQLite", "content": "Mail is a single-page email application that allows users to send emails to each other through API calls.<br><br>Users send and interact with emails through the front-end and JavaScript, which makes API calls with Django. Users can send, archive, and reply to emails.<br><br><video width='80%' src='media/Mail.mp4' controls >Video not supported.</video><br><br>This project is an extension of project 3, Mail from Harvard University's CS50W", "link":"https://github.com/bcchen52/mail"},
+        {"code": "floating-point-converter", "name": "Floating Point Converter", "role":"Individual Project", "blurb":"C program that utilizes bit twiddling and manipulation to create unique floating point types to store values. The IEEE standard has a double and single floating point, with specific precision and range.<br><br>This project showcases how information can be lost through typecasting with these different datatypes.", "time":"March 2024-April 2024", "skills": "Bit Twiddling", "languages": "C", "frameworks": "", "content": "This program uses C to take a double floating point value and use bit twiddling to store it into a floatx value with user-specified exponent and fraction bit sizes.<br><br>The floatx value will be stored in the right most bits of a double value, meaning that the total bits(exponent bits, fraction bits, and sign bit) have a maximum of 64. There must be at least 1 fraction bit and 1 exponent bit, and the minimum number of total bits is 3.<br><br>According to the IEEE standard, a double point floating values has 1 sign bit, 11 exponent bits, and 52 fraction bits. Some values may need more magnitude, i.e. more exponent bits, and less precision, i.e. less fraction bits, or vice versa. A value simply may not need the extent of precision and size given by a standard single or double floating point. <br><br>This project is an extension of a project from Binghamton University's CS220", "link":"https://github.com/bcchen52/floating-point-converter"},
+        {"code": "dataset-regression-analysis", "name": "Dataset Regression Analysis", "role":"Individual Project", "blurb":`Lab-style report of a linear regression analysis of the "Hitters" dataset from R's ISLR package. R was used to create and test changes to a linear regression model, and the model's equation was altered to address the regression model's assumptions.`, "time":"June 2024-July 2024", "skills": "Regression Analysis, Model Fitting", "languages": "R", "frameworks": "R Studio", "content": "This is a report-style linear regression analysis on the Hitters dataset from R's ISLR package.<br><br> This report includes a full exploratory analysis of the data and uses regression analysis to transform and create a regression model to accurately fit the data.<br><br><object data='your_url_to_pdf' type='application/pdf'><iframe src='media/finalprojectreport_brian_chen.pdf' width='80%' height='500px'></iframe></object><br><br>This project is the final project from Binghamton University's MATH329 ", "link":"https://github.com/bcchen52/hitters-regression-analysis"},
     ];
 
     const all_skills = [
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ]
     
     create_home_page(all_skills, all_projects);
-    create_classes_page(all_classes);
+    create_classes_page(all_classes, all_projects);
     create_projects(all_projects);
     create_experiences_page(all_experience);
     change_view('home');
@@ -167,18 +167,19 @@ carousel.state = {
     first_order : 0,
     length: 0,
     projects: [],
+    max: 9,
     change_length: (length) => {
         carousel.state.length = length;
     },
-    move: (direction, max) => {
+    move: (direction) => {
         if (direction=='left'){
             if (carousel.state.first_order == 0){
-                carousel.state.first_order = max;
+                carousel.state.first_order = carousel.state.max;
             } else {
                 carousel.state.first_order --;
             }
         } else {
-            if (carousel.state.first_order == max){
+            if (carousel.state.first_order == carousel.state.max){
                 carousel.state.first_order = 0;
             } else {
                 carousel.state.first_order ++;
@@ -200,7 +201,7 @@ carousel.state = {
     }
 }
 
-//get a new array of 5 icons starting at first_order
+//get a new array of desired_length icons starting at first_order
 function get_current_list(first_order, desired_length, all_skills){
     let current_list = [];
     const length = all_skills.length;
@@ -240,7 +241,7 @@ function populate_icons(icon_list, direction){
         var promise = Promise.resolve();
 
         let icons = document.querySelectorAll('.icon');
-        if (direction==='right'){
+        if (direction==='left'){
             icons = [...icons];
             icons = icons.reverse();
         }
@@ -248,10 +249,114 @@ function populate_icons(icon_list, direction){
         icons.forEach((icon)=>{
             promise = promise.then(function () {
                 if (direction=='left'){
-                    icon.animate([{left: '20px', opacity:'0'},{left : '0%', opacity:1}],{duration:200});
+                    icon.animate([{right: '30px', opacity:'0.5'},{right : '0%', opacity:1}],{duration:100});
                 } else {
-                    icon.animate([{right: '20px', opacity:'0'},{right : '0%', opacity:1}],{duration:200})
+                    icon.animate([{left: '30px', opacity:'0.5'},{left : '0%', opacity:1}],{duration:100})
 
+                }
+                icon.style.opacity=1;     
+                return new Promise(function (resolve) {
+                    setTimeout(resolve, 20);
+                });
+            });
+        });
+    }
+}
+
+
+function project_carousel(all_projects, move){
+    const projects = document.querySelector('#project-bar');
+    const length = Math.floor(projects.getBoundingClientRect().width / 170);
+    project_carousel.state.change_length(length);
+
+    const current_projects = get_current_list(project_carousel.state.first_order, project_carousel.state.length, all_projects);
+
+    //150 + 10px margin
+
+    populate_projects(current_projects, move);
+}
+
+
+project_carousel.state = {
+    first_order : 0,
+    length: 0,
+    projects: [],
+    max: 5,
+    change_length: (length) => {
+        project_carousel.state.length = length;
+    },
+    move: (direction) => {
+        //change the starting order
+        if (direction=='left'){
+            if (project_carousel.state.first_order == 0){
+                project_carousel.state.first_order = project_carousel.state.max;
+            } else {
+                project_carousel.state.first_order --;
+            }
+        } else {
+            if (project_carousel.state.first_order == project_carousel.state.max){
+                project_carousel.state.first_order = 0;
+            } else {
+                project_carousel.state.first_order ++;
+            }
+        }
+    },
+}
+
+function populate_projects(project_list, direction){
+    const projects = document.querySelector('#project-bar');
+    projects.innerHTML = "";
+    project_list.forEach((project)=>{
+       
+        const project_icon = document.createElement('div');
+        project_icon.setAttribute('class', 'col project-icon text-center');
+        project_icon.onclick = () => {
+            document.querySelector('#projects').click();
+            document.querySelector(`#${project.code}`).scrollIntoView();
+        }
+
+        const project_name = document.createElement('div');
+        project_name.setAttribute('class', 'project-name');
+
+        project_name.innerHTML = project.name;
+
+        const project_skills = document.createElement('div');
+        project_skills.setAttribute('class', 'project-skills');
+        project_skills.innerHTML = display_skills(project.languages, project.frameworks, "both");
+
+        const splitter = document.createElement('hr');
+
+        const project_content = document.createElement('div');
+        project_content.setAttribute('class', 'project-content');
+
+        project_content.innerHTML = project.blurb;
+        project_icon.appendChild(project_name);
+        project_icon.appendChild(project_skills);
+        project_icon.appendChild(splitter);
+        project_icon.appendChild(project_content);
+        
+        projects.appendChild(project_icon);
+    });
+
+    let project_icons = document.querySelectorAll('.project-icon');
+    var promise = Promise.resolve();
+
+    if (direction){
+        project_icons.forEach((icon)=>{
+            icon.style.opacity = 0;
+        });
+
+        if (direction==='left'){
+            project_icons = [...project_icons];
+            project_icons = project_icons.reverse();
+        }
+        project_icons.forEach((icon)=>{
+            promise = promise.then(function () {
+                if (direction==='left'){
+                    icon.animate([{right: '25px', opacity:'0.5'},{right : '0%', opacity:1}],{duration:100});
+                } else {
+                    icon.animate([{left: '25px', opacity:'0.5'},{left : '0%', opacity:1}],{duration:100})
+    
                 }
                 icon.style.opacity=1;     
                 return new Promise(function (resolve) {
@@ -262,9 +367,40 @@ function populate_icons(icon_list, direction){
     }
 }
 
-
-function project_carousel(){
-
+function display_skills(languages, frameworks, type){
+    let result = "";
+    let language = false;
+    let framework = false;
+    if (type === "languages" || type === "both"){
+        language = languages.length > 0;
+    } 
+    if (type === "frameworks" || type === "both"){
+        framework = frameworks.length > 0;
+    } 
+    if (language){
+        let language_array = languages.split(', ');
+        for (let i=0; i<language_array.length; i++){
+            result = result.concat(`<span class="skill">${language_array[i]}</span>`);
+            if (i != language_array.length-1){
+                result = result.concat(', ');
+            }
+        }
+    }
+    if (framework){
+        if (language){
+            result = result.concat(' & ');
+        }
+        let frameworks_array = frameworks.split(', ');
+        for (let i=0; i<frameworks_array.length; i++){
+            result = result.concat(`<span class="framework">${frameworks_array[i]}</span>`);
+            if (i != frameworks_array.length-1){
+                result = result.concat(', ');
+            }
+        }
+        //console.log(language_array);
+    }
+    //console.log(result);
+    return result;
 }
 
 function create_home_page(all_skills, all_projects){
@@ -276,7 +412,6 @@ function create_home_page(all_skills, all_projects){
     });
 
     carousel.state.update_projects(project_list);
-    console.log(carousel.state.projects);
 
     document.querySelectorAll('.main-nav').forEach((button) => {
         button.onclick = () => {
@@ -285,7 +420,6 @@ function create_home_page(all_skills, all_projects){
               //  button.classList.add('active');
             //}
             if (button.id==="home"){
-                console.log('yo');
                 button.src = "media/logo-clicked.png";
             }
             button.classList.add('active');
@@ -310,14 +444,24 @@ function create_home_page(all_skills, all_projects){
 
     window.onresize = () => {
         carousel(all_skills);
+        project_carousel(all_projects);
     }
 
     document.querySelectorAll('.arrow-icon').forEach((arrow)=>{
-        console.log(arrow.id === 'left');
         arrow.onclick = () => {
-            carousel.state.move(arrow.id, 9);
+            carousel.state.move(arrow.id);
             carousel.state.click('unclick');
             carousel(all_skills, arrow.id);
+        }
+    });
+
+    project_carousel(all_projects);
+
+    document.querySelectorAll('.arrow-project').forEach((project)=>{
+        project.onclick = () => {
+            project_carousel.state.move(project.id);
+            project_carousel(all_projects, project.id);
+            //carousel(all_skills, arrow.id);
         }
     })
 }
@@ -336,8 +480,6 @@ function change_view(view) {
     document.querySelector('#projects-container').style.display = "none";
     document.querySelector('#classes-container').style.display = "none";
     document.querySelector('#experiences-container').style.display = "none";
-
-    console.log(`change view is receiving ${view}`);
 
     if (view === 'projects') {
         document.querySelector('#projects-container').style.display = "block";
@@ -378,7 +520,7 @@ function unclick_buttons(button_type) {
     }
 }
 
-function create_classes_page(all_classes) {
+function create_classes_page(all_classes, all_projects) {
     const current_classes = [];
     const past_classes = [];
 
@@ -402,7 +544,7 @@ function create_classes_page(all_classes) {
 
     classes.appendChild(current_classes_heading);
 
-    create_classes(current_classes);
+    create_classes(current_classes, all_projects);
 
     const past_classes_heading = document.createElement('div');
     past_classes_heading.setAttribute('class','row course-heading');
@@ -410,11 +552,11 @@ function create_classes_page(all_classes) {
 
     classes.appendChild(past_classes_heading);
 
-    create_classes(past_classes);
+    create_classes(past_classes, all_projects);
 }
 //scrollspy
 
-function create_classes(classes_array){
+function create_classes(classes_array, all_projects){
     const classes = document.querySelector('#classes-container');
     for (const course_info of classes_array) {
         const course = document.createElement('div');
@@ -459,7 +601,12 @@ function create_classes(classes_array){
             for (const project of course_info.projects){
                 const project_link = document.createElement('span');
                 project_link.setAttribute('class', 'project-courses-link');
-                project_link.innerHTML = project;
+                project_link.innerHTML = all_projects.find(item => item.code === project)["name"];
+                project_link.onclick = () => {
+                    document.querySelector('#projects').click();
+                    document.querySelector(`#${project}`).scrollIntoView();
+                }
+
                 projects.appendChild(project_link);
 
                 if (project_counter != course_info.projects.length){
@@ -475,7 +622,7 @@ function create_classes(classes_array){
 
         //on click call a different function, this should be loaded before it is ever called
 
-        console.log(course_info);
+        //console.log(course_info);
 
         row.appendChild(code);
         row.appendChild(title);
@@ -605,21 +752,25 @@ function create_experiences_page(all_experiences) {
     heading.innerHTML = "Experience";
     experiences.append(heading);
 
-    const upcoming_experiences_heading = document.createElement('div');
-    upcoming_experiences_heading.setAttribute('class','row course-heading');
-    upcoming_experiences_heading.innerHTML = '<h4>Upcoming Experience</h4><hr>'
+    if (upcoming_experience.length > 0){
+        const upcoming_experiences_heading = document.createElement('div');
+        upcoming_experiences_heading.setAttribute('class','row course-heading');
+        upcoming_experiences_heading.innerHTML = '<h4>Upcoming Experience</h4><hr>'
 
-    experiences.appendChild(upcoming_experiences_heading);
+        experiences.appendChild(upcoming_experiences_heading);
 
-    create_experiences(upcoming_experience);
+        create_experiences(upcoming_experience);
+    }
 
-    const current_experiences_heading = document.createElement('div');
-    current_experiences_heading.setAttribute('class','row course-heading');
-    current_experiences_heading.innerHTML = '<h4>Current Experience</h4><hr>'
+    if (current_experience.length > 0){
+        const current_experiences_heading = document.createElement('div');
+        current_experiences_heading.setAttribute('class','row course-heading');
+        current_experiences_heading.innerHTML = '<h4>Current Experience</h4><hr>'
 
-    experiences.appendChild(current_experiences_heading);
+        experiences.appendChild(current_experiences_heading);
 
-    create_experiences(current_experience);
+        create_experiences(current_experience);
+    }
 }
 
 //populate experiences for upcoming and current
@@ -671,13 +822,13 @@ function add_info(item, container, info_type){
 
         if (item.languages.length != 0){
             const languages = document.createElement('div');
-            languages.innerHTML = `<span class="courses-mini-title">Languages: </span>${item.languages}`;
+            languages.innerHTML = `<span class="courses-mini-title">Languages: </span>${display_skills(item.languages, "", "languages")}`;
             container.appendChild(languages);
         }
 
         if (item.frameworks.length != 0){
             const frameworks = document.createElement('div');
-            frameworks.innerHTML = `<span class="courses-mini-title">Frameworks/Libraries: </span>${item.frameworks}`;
+            frameworks.innerHTML = `<span class="courses-mini-title">Frameworks/Libraries: </span>${display_skills("", item.frameworks, "frameworks")}`;
             container.appendChild(frameworks);
         }
     }
