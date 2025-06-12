@@ -1,409 +1,330 @@
 body {
-    background:url('../media/city_background.gif') repeat-y 100% 100% fixed;
-    background-size: cover;
-    background-position: center;
-    font-family: 'Poppins';
-    color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column; 
-    min-height: 100vh; 
+    background-color: #F5F0E6;
+    font-family: 'Inter', sans-serif;
+    color: #2E2E2E;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
 }
 
+div {
+    scroll-margin-top: 60px;
+}
+
 h1 {
-    font-family: 'JetBrains Mono';
-    font-weight: bold;
     font-size: 50px;
-    margin-top: 50px;
-    background: linear-gradient( #9ccfd8, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
+    user-select: none;
+    color: #2E2E2E;
+    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
-    font-family: 'JetBrains Mono';
-    font-weight: bold;
-    color: #03DAC6;
-    background: linear-gradient( #9ccfd8, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
+    user-select: none;
+    font-size: 40px;
+    color: #2E2E2E;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
 }
+
+h3 {
+    font-size: 20px;
+    color: #6E6259;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px;
+}
+
 h4 {
-    font-family: 'JetBrains Mono';
-    color: #c4a7e7;
+    color: #837060;
+}
+
+p {
+    background-color: #C8B89B;
+    color: #2E2E2E;
+}
+
+hr {
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 a {
-    color: #f6c177;
+    text-decoration: none;
+    color: #4A90A4;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #A4C2D8;
 }
 
 footer {
-    font-family: 'JetBrains Mono';
-    background-color: #191724;
-    height:100%;
-}
-
-footer a {text-decoration: none;}
-
-#main {
-    flex: 1;
-}
-
-.icons-info {
-    margin-top: 10px;
-}
-
-.icon-link {
-    font-size: 15px;
-    font-family: 'JetBrains Mono';
-    font-weight: bold;
-    background: linear-gradient(#3700b3, purple);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-}
-
-.icon-link:hover {
-    font-size: 18px;
-}
-
-.project-icon {
-    position: relative;
-    padding:10px;
-    width:150px;
-    height:300px !important;
-    margin-left:10px;
-    margin-right:10px;
-    background-color:#121212;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.project-icon:hover {
-    background-color: #1a1a1a;
-}
-
-
-.project-name {
-    font-size:20px;
-    font-family: 'JetBrains Mono';
-    font-weight: bold;
-    color: #03DAC6;
-    background: linear-gradient( #9ccfd8, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.project-icon:hover .project-name {
-    font-size:22px;
-}
-
-.project-courses-link {
-    z-index: 1;
-    font-family: 'JetBrains Mono';
-    font-weight: bold;
-    background: linear-gradient( #9ccfd8, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.project-courses-link:hover {
-    background: linear-gradient( white, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.project-skills {
-    font-size: 15px;
-}
-
-.skill {
-    background: linear-gradient(	#FFD700, #DAA520);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.framework {
-    background: linear-gradient(#cc99ff, 	 #b300b3);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.project-content {
-    height:100%;
-    font-size:10px;
-}
-
-.arrow-project {
-    font-size: 25px;
-    color: white;
-}
-
-.arrow-project:hover {
-    color: #03DAC6;
-}
-
-
-.arrow-icon {
-    font-size: 25px;
-    color: white;
-}
-
-.arrow-icon:hover {
-    color: #03DAC6;
-}
-
-.footer-text {
-    color: #9ccfd8;
-}
-
-.profile-picture {
-    padding: 5px;
-}
-
-.icon-background {
-    padding-left:0px;
-    padding-right:0px;
-    margin-left:15px;
-    margin-right:15px;
-}
-
-.icon {
-    height:80px;
-    width:80px;
-    padding:2px;
-    border-radius:2px;
-    position: relative;
-}
-
-#icons-title {
-    background: linear-gradient(#3700b3, purple);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#icons-info{
-    color: #3700b3;
-}
-
-.info-card {
-    margin-top:5px;
-    margin-bottom:5px;
-    background-color: #121212;
-    border-radius:5px;
-    padding: 15px;
-}
-
-.icons-bar {
-    background-color: #FFFFFF;
-    padding:5px;
-}
-
-#projects-nav {
-    font-family: 'JetBrains Mono';
-    background-color: black;
-    margin-bottom: 20px;
-}
-
-.project {
-    background-color: #121212;
-    color: #e0def4;
-}
-
-.experience {
-    background-color: #121212;
-    color: #e0def4;
-}
-
-.navbar {
-    border-radius:10px;
-    border-width:2px;
-    background-color:#000000;
-}
-
-.main-navbar {
-    margin-bottom:30px;
-    font-family: 'JetBrains Mono';
-}
-
-.main-nav {
-    cursor: pointer;
+    margin-top: 30px; 
+    background-color: #EADDC4;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #content {
-    margin-top:20px;
+    margin-top:60px;
 }
 
-.sticky-top { 
-    top: 10px;
+.navbar-styling {
+    background-color: #EADDC4;
 }
 
-.project-nav {
-    top:80px;
+#main {
+    margin-top:100px;
+    margin-bottom:40px;
 }
 
-.active > span{
-    font-weight:bold;
-    color:#8f38fa;
-    pointer-events: none;
+.icon-link {
+    color: #2E2E2E;
+    transition: transform 0.2s ease;
 }
 
-.active {
-    font-weight:bold;
-    color:#8f38fa;
-    pointer-events: none;
+.icon-link:hover {
+    transform: scale(1.05);
+    color:#2F5D73;
+}   
+
+#tech-stack {
+    margin-top:10px;
 }
 
-.nav-link {
-    color: #e0def4;
-}
-
-.nav-link:hover {
-    color:#BB86FC;
-}
-
-.project-link-active {
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background-color:#121212;
-    background: linear-gradient( #9ccfd8, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight:bold;
-    pointer-events: none;
-}
-
-.project-link {
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.project-link:hover {
-    background: linear-gradient( white, #03DAC6);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent; 
-}
-
-.course {
-    border-width:1px;
-    border-radius:20px;
-    border-style:hidden;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.tech-stack-item {
+    background-color: #EADDC4;
     width:100%;
-    background-color: #121212;
-    color: #e0def4;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color:#C8B89B;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.tech-stack-item:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: #F5EEDF;
+    color: #4A90A4;
+    font-weight: 600;
+}
+
+.tech-stack-item-container{
+    padding:5px;
+}
+
+.tech-stack-icon {
+    height:30px;
+    width:30px;
+    font-size:30px;
+    margin-right:10px;
+}
+
+.tech-stack-name {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 
-.course:hover {
-    background-color: #1a1a1a;
-}
-
-.course:hover .course-code{
-    background-color: #1a1a1a;
-    background: linear-gradient(#cc99ff, purple);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-.course-code {
-    font-size:25px;
-    font-weight: bold;
-    white-space: nowrap;
-    display: block;
-    overflow: hidden;
-}
-
-.course-title {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    overflow: hidden;
-    font-size:20px;
-}
-
-.course-info {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    overflow: hidden;
-    font-size:15px;
-    color:gray;
-}
-
-.course-heading {
-    margin-top: 15px;
-    font-size:20px;
-}
-
-.course-content {
-    text-overflow: ellipsis;
-    display: block;
-    overflow-wrap: break-word;
-    font-size:12px;
-}
-
-.courses-mini-title {
-    color: #c4a7e7;
-}
-
-.content {
-    font-size: 14px;
-}
-
-.experience {
-    margin-bottom: 30px;
-}
-
-.project {
-    border-radius: 15px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    scroll-margin-top: 100px;
-}
-
-.experience {
-    border-radius: 15px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.timestamp {
-    color: #9ccfd8;
-    font-weight: bold;
-    font-family: 'JetBrains Mono';
-}
-
-.info {
-    font-size: 15px;
+.tech-stack-row {
+    margin-left: -5px;
+    margin-right: -5px;
     margin-bottom: 10px;
 }
 
+.experience-tech-stack-icon {
+    height:20px;
+    width:20px;
+    font-size:20px;
+    margin-right:10px;
+}
+
+.experience-tech-stack-item {
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.experience-tech-stack-item {
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.experience-tech-stack-name {
+    font-size: 12px;
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+.nav-link.open {
+    color:#4A90A4;
+    font-weight: 700;
+}
+
+.experience-entry {
+    padding-left:0px;
+    padding-right:0px;
+    transition: transform 0.2s ease;
+}
+
+.experience-entry:hover {
+    transform: scale(1.01);
+}
+
+.experience-role {
+    font-size:20px;
+    padding-bottom:0px;
+    padding-top:0px;
+    margin-bottom:0px;
+    font-weight: 700;
+}
+
+.experience-company {
+    font-size:17px;
+}
+
+.date {
+    font-size: 15px;
+}
+
+.experience-ul {
+    list-style: square;
+    margin-bottom: 5px;
+}
+
+.see-more-button {
+    padding-top: 5px;
+    padding-bottom:5px;
+    cursor: pointer;
+    color: #4A90A4;
+    user-select: none;
+}
+
+.see-more-button:hover {
+    color:#A4C2D8;
+}
+
+.course-see-more-button {
+    font-size: 15px;
+}
+
+#tech-stack-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+#tech-stack-collapsible.open {
+    max-height: 1000px;
+}
+
+.project-collapsible {
+    max-height: 0px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, transform 1s ease;
+    visibility: hidden;
+}
+
+.project-collapsible.open {
+    max-height: 5000px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.course-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.course-collapsible.open {
+    max-height: 1000px;
+}
+
+.project-icon {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-left: 10px;
+}
+
+.project-icon:hover {
+    transform: scale(1.20);
+}
+
+.project-icon-link {
+    color: #2F5D73;
+}
+
+.project-icon-link:hover {
+    color: #4A90A4;
+}
+
+.course-code {
+    color: #6E6259;
+}
+
+.course-entry {
+    display: none;
+    overflow: visible;
+}
+
+.course-entry.open {
+    display: block;
+}
+
+.course-entry .experience-entry{
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.course-entry .experience-entry:hover {
+    transform: scale(1.02);
+}
+
+.course-entry .experience-entry:hover h2{
+    color: #4A90A4;
+}
+
+.courses-button {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.courses-button:hover {
+    transform: scale(1.1);
+}
+
+.courses-button.open {
+    color: #4A90A4;
+    font-weight: 700;
+}
+
+#courses-button-row {
+    cursor: default;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+}

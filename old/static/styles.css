@@ -1,0 +1,409 @@
+body {
+    background:url('../media/city_background.gif') repeat-y 100% 100% fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins';
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 50px;
+    background: linear-gradient( #9ccfd8, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    color: #03DAC6;
+    background: linear-gradient( #9ccfd8, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h4 {
+    font-family: 'JetBrains Mono';
+    color: #c4a7e7;
+}
+
+a {
+    color: #f6c177;
+}
+
+footer {
+    font-family: 'JetBrains Mono';
+    background-color: #191724;
+    height:100%;
+}
+
+footer a {text-decoration: none;}
+
+#main {
+    flex: 1;
+}
+
+.icons-info {
+    margin-top: 10px;
+}
+
+.icon-link {
+    font-size: 15px;
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    background: linear-gradient(#3700b3, purple);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.icon-link:hover {
+    font-size: 18px;
+}
+
+.project-icon {
+    position: relative;
+    padding:10px;
+    width:150px;
+    height:300px !important;
+    margin-left:10px;
+    margin-right:10px;
+    background-color:#121212;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-icon:hover {
+    background-color: #1a1a1a;
+}
+
+
+.project-name {
+    font-size:20px;
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    color: #03DAC6;
+    background: linear-gradient( #9ccfd8, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.project-icon:hover .project-name {
+    font-size:22px;
+}
+
+.project-courses-link {
+    z-index: 1;
+    font-family: 'JetBrains Mono';
+    font-weight: bold;
+    background: linear-gradient( #9ccfd8, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-courses-link:hover {
+    background: linear-gradient( white, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-skills {
+    font-size: 15px;
+}
+
+.skill {
+    background: linear-gradient(	#FFD700, #DAA520);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.framework {
+    background: linear-gradient(#cc99ff, 	 #b300b3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-content {
+    height:100%;
+    font-size:10px;
+}
+
+.arrow-project {
+    font-size: 25px;
+    color: white;
+}
+
+.arrow-project:hover {
+    color: #03DAC6;
+}
+
+
+.arrow-icon {
+    font-size: 25px;
+    color: white;
+}
+
+.arrow-icon:hover {
+    color: #03DAC6;
+}
+
+.footer-text {
+    color: #9ccfd8;
+}
+
+.profile-picture {
+    padding: 5px;
+}
+
+.icon-background {
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.icon {
+    height:80px;
+    width:80px;
+    padding:2px;
+    border-radius:2px;
+    position: relative;
+}
+
+#icons-title {
+    background: linear-gradient(#3700b3, purple);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#icons-info{
+    color: #3700b3;
+}
+
+.info-card {
+    margin-top:5px;
+    margin-bottom:5px;
+    background-color: #121212;
+    border-radius:5px;
+    padding: 15px;
+}
+
+.icons-bar {
+    background-color: #FFFFFF;
+    padding:5px;
+}
+
+#projects-nav {
+    font-family: 'JetBrains Mono';
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.project {
+    background-color: #121212;
+    color: #e0def4;
+}
+
+.experience {
+    background-color: #121212;
+    color: #e0def4;
+}
+
+.navbar {
+    border-radius:10px;
+    border-width:2px;
+    background-color:#000000;
+}
+
+.main-navbar {
+    margin-bottom:30px;
+    font-family: 'JetBrains Mono';
+}
+
+.main-nav {
+    cursor: pointer;
+}
+
+#content {
+    margin-top:20px;
+}
+
+.sticky-top { 
+    top: 10px;
+}
+
+.project-nav {
+    top:80px;
+}
+
+.active > span{
+    font-weight:bold;
+    color:#8f38fa;
+    pointer-events: none;
+}
+
+.active {
+    font-weight:bold;
+    color:#8f38fa;
+    pointer-events: none;
+}
+
+.nav-link {
+    color: #e0def4;
+}
+
+.nav-link:hover {
+    color:#BB86FC;
+}
+
+.project-link-active {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color:#121212;
+    background: linear-gradient( #9ccfd8, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:bold;
+    pointer-events: none;
+}
+
+.project-link {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-link:hover {
+    background: linear-gradient( white, #03DAC6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.course {
+    border-width:1px;
+    border-radius:20px;
+    border-style:hidden;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width:100%;
+    background-color: #121212;
+    color: #e0def4;
+    cursor: pointer;
+}
+
+.course:hover {
+    background-color: #1a1a1a;
+}
+
+.course:hover .course-code{
+    background-color: #1a1a1a;
+    background: linear-gradient(#cc99ff, purple);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.course-code {
+    font-size:25px;
+    font-weight: bold;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+}
+
+.course-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    font-size:20px;
+}
+
+.course-info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    font-size:15px;
+    color:gray;
+}
+
+.course-heading {
+    margin-top: 15px;
+    font-size:20px;
+}
+
+.course-content {
+    text-overflow: ellipsis;
+    display: block;
+    overflow-wrap: break-word;
+    font-size:12px;
+}
+
+.courses-mini-title {
+    color: #c4a7e7;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.experience {
+    margin-bottom: 30px;
+}
+
+.project {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    scroll-margin-top: 100px;
+}
+
+.experience {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.timestamp {
+    color: #9ccfd8;
+    font-weight: bold;
+    font-family: 'JetBrains Mono';
+}
+
+.info {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+

@@ -1,179 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="description" content="Who I am and what I do">
+        <meta name="description" content="Current Data Modeling and Software Engineering Team Lead at the Global Health Impact project and undergraduate systems researcher at the University of Utah. Open to 2026 summer roles.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            Brian Chen | CS & Statistics @ Binghamton University '26
+            Brian Chen | CS & Statistics '27
         </title>
         <link rel="icon" type="image/x-icon" href="media/favicon.ico">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="static/styles.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@500;700&family=Poppins:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     </head>
     <body>
-        <div class="container" id="main">
-            <nav class="navbar main-navbar sticky-top navbar-expand-sm top-nav navbar-dark shadow">
-                <div class="container-fluid">
-                    <span class="navbar-brand">
-                        <img class="main-nav active" id="home" src="media/logo-clicked.png" alt="" width="50" height="50">
-                    </span>       
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav me-auto mb-lg-0">
-                            <li class="nav-item main-nav" id="projects">
-                                <span class="nav-link" aria-current="page">Projects</span>
-                            </li>
-                            <li class="nav-item main-nav" id="classes">
-                                <span class="nav-link" aria-current="page">Courses</span>
-                            </li>
-                            <li class="nav-item main-nav" id="experiences">
-                                <span class="nav-link" aria-current="page">Experience</span>
-                            </li>
-                        </ul>
-                    </div>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-styling">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand nav-item" href="#" id="main-nav">Brian Chen</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link nav-item" id="experience-nav" href="#experience">Experience</a>
+                    <a class="nav-link nav-item" id="projects-nav" href="#projects">Projects</a>
+                    <a class="nav-link nav-item" id="courses-nav" href="#courses">Courses</a>
                 </div>
-            </nav>
-            <div class="container" id="content">
-                <div class="container" id="home-container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-10">
-                            <div class="row justify-content-between">
-                                <div class="col-12 info-card about">
-                                    <h2>Hi, I'm Brian Chen</h2> 
-                                    <p>I'm a computer science and statistics student who loves building things that work. Whether it's creating full-stack web applications, automating data pipelines, or simulating complex systems in C++, I enjoy the process of turning ideas into real, functional projects.</p>
-                                    <p>This site is a collection of what I’ve built so far — from web platforms to backend systems — and a way to keep track of what I’m learning along the way.</p>
-                                    <p>The languages and frameworks I use are Python, C, C++, JavaScript, Java, R, HTML, CSS, Django, Flask, Bootstrap, and React.</p>
-                                    <p>Currently, I am learning mobile development.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center flex-nowrap">
-                        <div class="col-auto text-center my-auto">
-                            <i class="arrow-project fa-solid fa-caret-left" id="left"></i>
-                        </div>
-                        <div class="col-lg-8 col-10 info-card text-center">
-                            <h2>Projects</h2> 
-                            <hr>      
-                            <div class="row justify-content-around" id="project-bar">
-                                <div class="col-auto" style="height:200px">
-                                    <div>
-                                        Header
-                                    </div>
-                                    <div>
-                                        Content
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div>
-                                        Header
-                                    </div>
-                                    <div>
-                                        Content
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div>
-                                        Header
-                                    </div>
-                                    <div>
-                                        Content
-                                    </div>
-                                </div>
-                            </div>                    
-                        </div>
-                        <div class="col-auto text-center my-auto">
-                            <i class="arrow-project fa-solid fa-caret-right" id="right"></i>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center flex-nowrap">
-                        <div class="col-auto text-center my-auto">
-                            <i class="arrow-icon fa-solid fa-caret-left" id="left"></i>
-                        </div>
-                        <div class="col-lg-8 col-10 info-card icons-bar" id="icon-bar-col">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <h2 id="icons-title">Tech Stack</h2>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center flex-nowrap" id="icon-bar">
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <span id="icons-info">Click icon for more info.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto text-center my-auto">
-                            <i class="arrow-icon fa-solid fa-caret-right" id="right"></i>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-10 info-card">
-                            <h2>About This Site</h2>
-                            <hr>
-
-                            <p>This is a responsive static single-page application utilizing HTML, CSS(Bootstrap), and vanilla JavaScript that is hosted with Github pages.</p>
-                            <p>The Projects, Courses, and Experience pages are fully loaded using JavaScript, allowing for easy updates.</p>
-                            <p>The responsive carousel feature for the icons and projects on the home(this) page and the scrollspy feature on the prohjects page were fully created with vanilla JavaScript.</p>
-                            <h4>Projects Page</h4>
-                            <hr>
-                                <p>The Projects page utilizes Bootstrap's container property to display the projects and project navbar. This is responsive and the navbar disappears when the screen is small enough.</p>
-                                <p>The Projects page also features a scrollspy functionality on the projects navbar, created with vanilla Javascript. This means that the projects navbar will activate in response to what is on the screen.</p>
-                                <p>This is done by adding a function to JavaScript's window.onscroll, which is called whenever the screen is scrolled. The function then checks if the top of any project's container is in the range of 60-200px from the top of the screen, with 60px being slightly above the bottom of the main nav bar. Because this function is called whenever the screen is moved, clicking on a project's link will cause the projects inbetween that project and the current project on the screen to be highlighted.</p>
-                            <br>
-                            <h4>Courses Page</h4>
-                            <hr>
-                                <p>The Courses page utilizies Bootstrap's container property to collapse and change the view of each classes' information when screen shrinks.</p>
-                                <p>If a course has more information, clicking on it will change the display of the container holding that information to 'block', and displaying that information.</p>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container" id="projects-container"></div>
-                <div class="container" id="classes-container"></div>
-                <div class="container" id="experiences-container"></div>
             </div>
+        </nav>
+        <div id="content">
+            <div class="container" id="main">
+                <div class="row">
+                    <div class="col-md-6 col-8 mx-auto">
+                        <h1>Hi, I'm Brian</h1>
+                        <hr>
+                        <div class="basic-text">
+                            I'm a rising junior at Binghamton pursuing a <b>BS in Computer Science</b> and a <b>BA in Mathematical Sciences &ndash; Statistics</b>, with plans to switch from to the BS in Data Science and Statistics to gain a stronger practical and theoretical foundation.
+                        </div>
+                        <br>
+                        <div class="basic-text">
+                            Currently, I'm the <b>Data Modeling</b> and <b>Software Engineering</b> Team Lead at the Global Health Impact project, where I'm helping build an impact forecasting tool. I'm also doing systems research at the University of Utah, where I'm planning to do a project on floating point arithmetic in intelligent computing.
+                        </div>
+                        <br>
+                        <div class="basic-text">
+                            I'm passionate about problem-solving, math, and the chest supported T-bar row. 
+                        </div>
+                        <br>
+                        <div class="basic-text">
+                            Contact me!
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <a href="mailto:bcchen52@gmail.com" class="icon-link">                        
+                            <i class="fa fa-envelope fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="https://www.linkedin.com/in/bcchen52/" class="icon-link" target="_blank" rel="noopener noreferrer">                        
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="https://github.com/bcchen52" class="icon-link" target="_blank" rel="noopener noreferrer">                        
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="tech-stack">
+                <div class="row">
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <h2>Tech Stack</h2>
+                        <hr>
+                        <h3>Languages</h3>
+                        <div class="row tech-stack-row" id="tech-stack-languages-row"></div>
+                        <div id="tech-stack-collapsible">
+                            <h3>Data Tools</h3>
+                            <div class="row tech-stack-row" id="tech-stack-data-row"></div>
+                            <h3>Web Frameworks</h3>
+                            <div class="row tech-stack-row" id="tech-stack-web-row"></div>
+                            <h3>Databases</h3>
+                            <div class="row tech-stack-row" id="tech-stack-db-row"></div>
+                            <h3>Infrastructure & Deployment</h3>
+                            <div class="row tech-stack-row" id="tech-stack-infra-row"></div>
+                            <h3>Dev Tools</h3>
+                            <div class="row tech-stack-row" id="tech-stack-dev-row"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center">
+                        <h3 class="see-more-button" id="tech-stack-see-more">See more...</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="experience">
+                <div class="row">
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <h2>Experience</h2>
+                        <div id="experience-col">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="projects">
+                <div class="row">
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <h2>Projects</h2>
+                        <div id="projects-col"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="courses">
+                <div class="row">
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2>Courses</h2>
+                            <div id="courses-button-row">
+                                <span class="courses-button" id="math">Math</span>
+                                <span class="courses-button" id="cs">CS</span>
+                                <span class="courses-button" id="all">All</span>
+                            </div>
+                        </div>
+                        <div id="courses-col">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <h3 class="footer-text">Contact Me</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="mailto:bcchen52@gmail.com" class="icon-link">                        
+                                <i class="fa fa-envelope fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://www.linkedin.com/in/bcchen52/" class="icon-link" target="_blank" rel="noopener noreferrer">                        
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://github.com/bcchen52" class="icon-link" target="_blank" rel="noopener noreferrer">                        
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <footer class="text-center text-white">
-            <div class="container">
-                <div class="text-center p-3 text-white">
-                    Contact Me @ <a href="mailto:bcchen52@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-text">
-                        bcchen52@gmail.com
-                    </a>
-                </div>
-                <section class="text-center p-3">
-                    <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <a href="mailto:bcchen52@gmail.com" target="_blank" rel="noopener noreferrer" class="text-white">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="https://www.linkedin.com/in/bcchen52" target="_blank" rel="noopener noreferrer" class="text-white">
-                            <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="https://github.com/bcchen52" target="_blank" rel="noopener noreferrer" class="text-white">
-                            <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <div class="text-center p-3">
-                © 2024 brianchen.org
-                </div>
-            </div>
-        </footer>
         <script src="static/styles.js"></script>
     </body>
 </html>
