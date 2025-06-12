@@ -7,3 +7,7 @@ This is a static and user-responsive single-page website made with HTML, CSS(Boo
 Content is connected to the Googl Visualization API for easy updates without needed to change any code.
 
 Website was rebuilt in June 2025, previous version is in old/.
+
+Future fixes...
+- Navbar button issue
+- Project link to project in see more... section should auto expand that section
